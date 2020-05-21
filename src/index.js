@@ -1,89 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import Stats from './Stats'
+import Citati from './Citati'
+
+const citati = [
+  'Човек који не воли није способан да осети величину туђе љубави, ни снагу љубоморе, ни опасност која се у њој крије',
+  'Чудно је како је мало потребно да будемо срећни, и још чудније: како нам често баш то мало недостаје!',
+  'Што не боли – то није живот, што не пролази – то није срећа',
+  'Звезданог неба и људског срца никад се човек неће моћи нагледати',
+  'Љубав је ваљда једина ствар на свијету који не треба објашњавати, ни тражити јој разлог',
+  'Ожени се у сваком случају. Ако добијеш добру жену, бићеш срећан.Ако добијеш лошу, постаћеш филозоф.Жене нас инспиришу на велика дела, а спречавају нас да их учинимо',
+  'Добро вино и лепа жена - то су два најлепша отрова',
+]
 
 const App = () => {
-  const recept = 'Палачинке'
-  const sastojak1 = 'јаја'
-  const cena1 = 42
-  const sastojak2 = 'брашно'
-  const cena2 = 50
-  const sastojak3 = 'шећер'
-  const cena3 = 32
+  // Чувамо стање за сваки клик посебно
+  // Почетно стање за све оцене је 0
+  const [positive, setPositive] = useState(0)
+  const [neutral, setNeutral] = useState(0)
+  const [negative, setNegative] = useState(0)
 
-  const recept1 = {
-    naziv: 'Palacinke',
-    sastojci: [
-      {
-        naziv: 'jaja',
-        cena: 45
-      },
-      {
-        naziv: 'brasno',
-        cena: 55
-      },
-      {
-        naziv: 'secer',
-        cena: 33
-      },
-      {
-        naziv: 'nutela',
-        cena: 60
-      },
-      {
-        naziv: 'banana',
-        cena: 20
-      }
-    ]
-  }
-  let arr = [cena1,cena2,cena3]
+  
   return (
     <div>
-      <Naslov title={recept} />
-      <Deo ingredient={sastojak1} price={cena1}/>
-      <Deo ingredient={sastojak2} price={cena2}/>
-      <Deo ingredient={sastojak3} price={cena3}/>
-      <Ukupno arr={arr} />
-      <Recept recept={recept1} />
+      <h1>Dodaj ocenu</h1>
+      <button onClick={() => setPositive(positive + 1)}>Positive</button>
+      <button onClick={() => setNeutral(neutral + 1)}>Neutral</button>
+      <button onClick={() => setNegative(negative + 1)}>Negative</button>
+      <Stats positive={positive} negative={negative} neutral={neutral}/>
+      <Citati quotes={citati} />
     </div>
   )
 }
 
-const Naslov = ({ title }) => {
-  return (
-  <h1>{title}</h1>
-  )
-}
-const Deo = ({ ingredient, price }) => {
-  return (
-  <p>{ingredient} - {price}</p>
-  )
-}
-const Ukupno = ({ arr }) => {
-  let sum = arr.reduce((a,b) => a + b)
-  return (
-  <p>Ukupna cena: {sum}</p>
-  )
-}
-
-const Recept = ({ recept }) => {
-  let cene = []
-  const sastojci = recept.sastojci.map((el) => {
-    cene.push(el.cena)
-    return <p> {el.naziv} - {el.cena} </p>
-  })
-  return (
-    <>
-    <Naslov title={recept.naziv} />
-    <p>{sastojci}</p>
-    <Ukupno arr={cene} />
-    </>
-  )
-}
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+ReactDOM.render(<App />, 
   document.getElementById('root')
-);
-
+)
