@@ -37,6 +37,7 @@ const SpaceX = () => {
             name={launch.mission_name}
             year={launch.launch_year}
             image={launch.links.mission_patch_small}
+            link={launch.links.article_link}
           />
         ))}
       </div>

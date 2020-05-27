@@ -27,5 +27,13 @@ body {
   border-radius: 4px;
   padding: 10px;
   margin: 10px;
-  box-shadow: 2px 3px 5px cornflowerblue;
+  box-shadow: 2px 2px 3px cornflowerblue;
+}
+
+.launch-div a img {
+  filter: grayscale(1);
+  transition: filter 0.2s ease-in;
+}
+.launch-div a img:hover {
+  filter: grayscale(0);
 }
