@@ -4,10 +4,16 @@ body {
   box-sizing: border-box;
 }
 
+.header {
+  color: white;
+  background-color: cornflowerblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .header h1 {
   font-size: 55px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: cornflowerblue;
   margin: 10px auto;
 }
 .header p {
@@ -32,8 +38,47 @@ body {
 
 .launch-div a img {
   filter: grayscale(1);
-  transition: filter 0.2s ease-in;
+  transition: filter 0.1s ease-in;
 }
 .launch-div a img:hover {
   filter: grayscale(0);
+}
+
+.loader {
+  margin: 250px auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid cornflowerblue;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info-footer {
+  margin-top: 10px;
+  background-color: cornflowerblue;
+  padding: 10px;
+  color: white;
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 18px;
 }

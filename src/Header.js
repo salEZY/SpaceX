@@ -1,14 +1,14 @@
 import React from "react";
 
-const SpaceXHeader = ({ name, founder, founded, summary }) => {
+const Header = ({ name, founder, summary }) => {
   return (
     <div className="header">
       <h1>
-        {name} - {founder} - {founded}
+        {name} - {founder}
       </h1>
       <p>{summary}</p>
     </div>
   );
 };
 
-export default SpaceXHeader;
+export default Header;

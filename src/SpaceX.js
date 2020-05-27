@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Launch from "./Launch";
-import SpaceXHeader from "./SpaceXHeader";
+import Header from "./Header";
+import Footer from "./Footer";
+import Spinner from "./Spinner";
 
 import "./SpaceX.css";
 
 const COMPANY_INFO = "https://api.spacexdata.com/v3/info";
 const LAUNCHES_URL = "https://api.spacexdata.com/v3/launches";
+let isLoading = true;
 
 const SpaceX = () => {
   const [data, setData] = useState([]);
@@ -20,16 +23,14 @@ const SpaceX = () => {
       setInfo(teslaInfo.data);
     };
     fetchData();
+    isLoading = false;
   }, []);
 
-  return (
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <div style={{ textAlign: "center" }}>
-      <SpaceXHeader
-        name={info.name}
-        founder={info.founder}
-        founded={info.founded}
-        summary={info.summary}
-      />
+      <Header name={info.name} founder={info.founder} summary={info.summary} />
       <div className="launches-list">
         {data.map((launch) => (
           <Launch
@@ -41,6 +42,14 @@ const SpaceX = () => {
           />
         ))}
       </div>
+      <Footer
+        founder={info.founder}
+        founded={info.founded}
+        employees={info.employees}
+        //address={info.links.website}
+        // city={city}
+        // state={state}
+      />
     </div>
   );
 };
