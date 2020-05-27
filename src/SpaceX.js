@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Launch } from "./Launch";
+import Launch from "./Launch";
 import SpaceXHeader from "./SpaceXHeader";
+
+import "./SpaceX.css";
 
 const COMPANY_INFO = "https://api.spacexdata.com/v3/info";
 const LAUNCHES_URL = "https://api.spacexdata.com/v3/launches";
 
-export const SpaceX = () => {
+const SpaceX = () => {
   const [data, setData] = useState([]);
   const [info, setInfo] = useState({});
 
@@ -28,14 +30,18 @@ export const SpaceX = () => {
         founded={info.founded}
         summary={info.summary}
       />
-      {data.map((launch) => (
-        <Launch
-          key={launch.flight_number}
-          name={launch.mission_name}
-          year={launch.launch_year}
-          image={launch.links.mission_patch_small}
-        />
-      ))}
+      <div className="launches-list">
+        {data.map((launch) => (
+          <Launch
+            key={launch.flight_number}
+            name={launch.mission_name}
+            year={launch.launch_year}
+            image={launch.links.mission_patch_small}
+          />
+        ))}
+      </div>
     </div>
   );
 };
+
+export default SpaceX;
