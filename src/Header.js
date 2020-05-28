@@ -9,14 +9,11 @@ const Header = ({ name, founder, summary }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {name} <i className="fas fa-rocket" style={{ marginLeft: "5px" }}></i>
+          {name} <i className="fas fa-rocket"></i>
         </a>
         <span>
           {` ${founder}`}
-          <i
-            className="fas fa-user-astronaut"
-            style={{ marginLeft: "10px" }}
-          ></i>
+          <i className="fas fa-user-tie" style={{ marginLeft: "10px" }}></i>
         </span>
       </h1>
       <p>{summary}</p>
