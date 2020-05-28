@@ -16,7 +16,14 @@ body {
   font-size: 55px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin: 10px auto;
+  letter-spacing: 3px;
 }
+
+.header h1 a {
+  text-decoration: none;
+  color: white;
+}
+
 .header p {
   font-style: oblique;
 }
@@ -94,4 +101,10 @@ body {
   flex-direction: column;
   padding: 10px;
   font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+  .launch-div {
+    width: 40%;
+  }
 }
