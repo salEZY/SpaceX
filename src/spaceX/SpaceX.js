@@ -4,6 +4,7 @@ import Launch from "./components/Launch";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Spinner from "./components/Spinner";
+import ToTopButton from "./components/ToTopButton";
 
 import "./SpaceX.css";
 
@@ -17,9 +18,9 @@ const SpaceX = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(LAUNCHES_URL);
+      const result = await axios.get(LAUNCHES_URL);
       setData(result.data);
-      const teslaInfo = await axios(COMPANY_INFO);
+      const teslaInfo = await axios.get(COMPANY_INFO);
       setInfo(teslaInfo.data);
     };
     fetchData();
@@ -42,6 +43,7 @@ const SpaceX = () => {
           />
         ))}
       </div>
+      <ToTopButton />
       <Footer
         founder={info.founder}
         founded={info.founded}
