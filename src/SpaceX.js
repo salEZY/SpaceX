@@ -26,6 +26,7 @@ const SpaceX = () => {
     isLoading = false;
   }, []);
 
+  //console.log(info.headquarters.address);
   return isLoading ? (
     <Spinner />
   ) : (
@@ -46,9 +47,9 @@ const SpaceX = () => {
         founder={info.founder}
         founded={info.founded}
         employees={info.employees}
-        address={"Rocket Road"}
-        city={"Hawthorne"}
-        state={"California"}
+        address={info.headquarters ? info.headquarters.address : "Rocket Road"}
+        city={info.headquarters ? info.headquarters.city : "Hawthorne"}
+        state={info.headquarters ? info.headquarters.state : "California"}
       />
     </div>
   );
