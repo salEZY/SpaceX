@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -75,8 +76,20 @@ body {
   justify-content: space-between;
 }
 
+.company-info div span {
+  margin: 5px 0;
+  font-size: 19px;
+}
+
 .people-info {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.address-info {
+  text-align: right;
   display: flex;
   flex-direction: column;
   padding: 10px;

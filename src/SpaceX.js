@@ -46,9 +46,9 @@ const SpaceX = () => {
         founder={info.founder}
         founded={info.founded}
         employees={info.employees}
-        //address={info.links.website}
-        // city={city}
-        // state={state}
+        address={"Rocket Road"}
+        city={"Hawthorne"}
+        state={"California"}
       />
     </div>
   );

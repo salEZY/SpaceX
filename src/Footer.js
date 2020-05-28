@@ -11,9 +11,9 @@ const Footer = ({ founder, founded, employees, address, city, state }) => {
             <span>Number of employees: {employees}</span>
           </div>
           <div className="address-info">
-            <span>{address}</span>
-            <span>{city}</span>
-            <span>{state}</span>
+            <span>Address: {address}</span>
+            <span>City: {city}</span>
+            <span>State: {state}</span>
           </div>
         </div>
       </footer>
