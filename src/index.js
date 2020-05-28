@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import Stats from "./Stats";
-// import Citati from "./Citati";
-import SpaceX from "./SpaceX";
+// import Stats from "./stats-app/Stats";
+// import Citati from "./citati-app/Citati";
+import SpaceX from "./spaceX/SpaceX";
 
 // const citati = [
 //   "Човек који не воли није способан да осети величину туђе љубави, ни снагу љубоморе, ни опасност која се у њој крије",

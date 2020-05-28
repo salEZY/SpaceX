@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Launch from "./Launch";
-import Header from "./Header";
-import Footer from "./Footer";
-import Spinner from "./Spinner";
+import Launch from "./components/Launch";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Spinner from "./components/Spinner";
 
 import "./SpaceX.css";
 
@@ -26,7 +26,6 @@ const SpaceX = () => {
     isLoading = false;
   }, []);
 
-  //console.log(info.headquarters.address);
   return isLoading ? (
     <Spinner />
   ) : (
