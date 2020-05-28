@@ -31,6 +31,7 @@ const SpaceX = () => {
     <Spinner />
   ) : (
     <div style={{ textAlign: "center" }}>
+      <ToTopButton />
       <Header name={info.name} founder={info.founder} summary={info.summary} />
       <div className="launches-list">
         {data.map((launch) => (
@@ -43,7 +44,6 @@ const SpaceX = () => {
           />
         ))}
       </div>
-      <ToTopButton />
       <Footer
         founder={info.founder}
         founded={info.founded}
