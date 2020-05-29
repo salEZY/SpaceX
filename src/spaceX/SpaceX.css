@@ -108,12 +108,12 @@
   padding-top: 7px;
   font-size: 40px;
   position: absolute;
-  bottom: 30px;
+  bottom: 140px;
   right: 30px;
   z-index: 10;
   color: white;
   background-color: cornflowerblue;
-  border: 1px solid cornflowerblue;
+  border: 3px solid cornflowerblue;
   border-radius: 4px;
 }
 

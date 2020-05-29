@@ -3,7 +3,7 @@ import ScrollToTop from "react-scroll-up";
 
 const ToTopButton = () => {
   return (
-    <ScrollToTop showUnder={100} duration={1000}>
+    <ScrollToTop showUnder={500} duration={1000}>
       <span id="to-top-btn">
         <i className="fas fa-long-arrow-alt-up"></i>
       </span>
