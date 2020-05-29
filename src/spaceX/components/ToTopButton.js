@@ -20,13 +20,22 @@ const ToTopButton = () => {
 
   window.onscroll = () => {
     window.scrollY > 500 ? showBtn("block") : showBtn("none");
-    window.scrollY > 4900 ? placeBtn("200px") : placeBtn("30px");
+    window.scrollY > document.body.scrollHeight - 1100
+      ? placeBtn("200px")
+      : placeBtn("30px");
   };
 
   return (
-    <a href="!#" id="to-top-btn" className={style}>
+    <span
+      id="to-top-btn"
+      className={style}
+      onClick={() => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }}
+    >
       <i className="fas fa-long-arrow-alt-up"></i>
-    </a>
+    </span>
   );
 };
 

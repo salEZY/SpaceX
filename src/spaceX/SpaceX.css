@@ -109,6 +109,7 @@
 }
 
 #to-top-btn {
+  cursor: pointer;
   height: 60px;
   width: 60px;
   padding-top: 7px;
@@ -118,8 +119,9 @@
   z-index: 10;
   color: white;
   background-color: cornflowerblue;
-  border: 3px solid cornflowerblue;
+  border: 2px solid cornflowerblue;
   border-radius: 4px;
+  transition: all 0.4s ease-in-out;
 }
 
 #to-top-btn:hover {
