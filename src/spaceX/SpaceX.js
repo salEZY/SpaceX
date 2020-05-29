@@ -30,7 +30,7 @@ const SpaceX = () => {
   return isLoading ? (
     <Spinner />
   ) : (
-    <div style={{ textAlign: "center" }}>
+    <div className="main">
       <ToTopButton />
       <Header name={info.name} founder={info.founder} summary={info.summary} />
       <div className="launches-list">

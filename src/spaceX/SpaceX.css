@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -26,6 +27,11 @@
 .header p {
   font-style: oblique;
 }
+
+.main {
+  text-align: center;
+}
+
 .launches-list {
   display: flex;
   flex-direction: row;
@@ -107,8 +113,7 @@
   width: 60px;
   padding-top: 7px;
   font-size: 40px;
-  position: absolute;
-  bottom: 140px;
+  position: fixed;
   right: 30px;
   z-index: 10;
   color: white;
