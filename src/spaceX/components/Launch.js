@@ -6,7 +6,7 @@ const Launch = ({ name, year, image, link }) => {
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
           src={image}
-          alt="launch pic"
+          alt={`Pic of ${name}`}
           style={{ width: "100px", height: "100px" }}
         />
       </a>
