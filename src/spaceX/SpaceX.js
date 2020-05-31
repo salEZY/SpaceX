@@ -55,7 +55,6 @@ const SpaceX = () => {
       <ToTopButton />
       <Header
         name={info.name ? info.name : "SpaceX"}
-        founder={info.founder ? info.founder : "Elon Musk"}
         summary={info.summary ? info.summary : summary}
       />
       <Search onSelectChange={HandleSelectChange} value={select} />

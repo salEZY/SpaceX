@@ -11,7 +11,9 @@ const Launch = ({ name, year, image, link }) => {
         />
       </a>
       <h3>{name}</h3>
-      <p>Year of launch: {year}</p>
+      <p style={{ marginTop: "10px", fontSize: "18px" }}>
+        Year of launch: {year}
+      </p>
     </div>
   );
 };
