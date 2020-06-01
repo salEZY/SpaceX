@@ -1,11 +1,11 @@
 import React from "react";
-import Rocket from "./Rocket";
+import Info from "./Info";
 
 const Search = ({ onSelectChange, value }) => {
   return (
-    <div id="inputs">
-      <>
-        <label>Select past/upcoming launches</label>
+    <div id="info-container">
+      <div className="inputs">
+        <label>Select past or upcoming launches</label>
         <div className="pastFuture-container">
           <div className="inputs-div">
             <select
@@ -35,8 +35,8 @@ const Search = ({ onSelectChange, value }) => {
             </select>
           </div>
         </div>
-      </>
-      <Rocket />
+      </div>
+      <Info />
     </div>
   );
 };

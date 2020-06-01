@@ -1,10 +1,19 @@
 @font-face {
   font-family: "rezregular";
-  src: url("rez-webfont.woff2") format("woff2"),
-    url("rez-webfont.woff") format("woff");
+  src: url("./fonts/rez-webfont.woff2") format("woff2"),
+    url("./fonts/rez-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "julius_sans_oneregular";
+  src: url("./fonts/juliussansone-regular-webfont.woff2") format("woff2"),
+    url("./fonts/juliussansone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +35,7 @@ label {
 .header h1 {
   font-family: "rezregular";
   font-size: 60px;
+  font-weight: bolder;
   margin: 10px auto;
   letter-spacing: 5px;
 }
@@ -37,10 +47,13 @@ label {
 
 .header p {
   font-style: oblique;
+  font-family: "julius_sans_oneregular";
+  margin: 10px auto;
 }
 
 .main {
   text-align: center;
+  font-family: "julius_sans_oneregular";
 }
 
 .launches-list {
@@ -66,6 +79,10 @@ label {
 }
 .launch-div a img:hover {
   filter: grayscale(0);
+}
+
+.launch-div h3 {
+  margin: 10px auto;
 }
 
 .loader {
@@ -145,17 +162,45 @@ label {
   margin: 10px auto 30px;
 }
 
-#inputs {
-  margin: 30px auto;
+#info-container {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.inputs {
+  width: 40%;
+  height: 400px;
+  padding: 10px;
+  padding-top: 100px;
+}
+
+.img-container {
+  width: 60%;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.img-container img {
+  width: 50%;
+  height: 100%;
+}
+
+.img-container p {
+  font-size: 25px;
+  padding: 75px 20px 0 20px;
 }
 
 .inputs-div select {
+  font-family: "julius_sans_oneregular";
   cursor: pointer;
   width: 250px;
   height: 50px;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px;
   background-color: #f4faff;
   box-shadow: 0px 5px 10px gainsboro;

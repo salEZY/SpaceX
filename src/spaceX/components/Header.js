@@ -12,7 +12,6 @@ const Header = ({ name, summary }) => {
           {name} <i className="fas fa-rocket"></i>
         </a>
       </h1>
-      <p>{summary}</p>
     </div>
   );
 };

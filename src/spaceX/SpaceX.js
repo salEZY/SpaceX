@@ -13,8 +13,6 @@ const COMPANY_INFO = "https://api.spacexdata.com/v3/info";
 const ALL_LAUNCHES = "https://api.spacexdata.com/v3/launches";
 const PAST_LAUNCHES = "https://api.spacexdata.com/v3/launches/past";
 const UPCOMING_LAUNCHES = "https://api.spacexdata.com/v3/launches/upcoming";
-const summary =
-  "SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.";
 
 const SpaceX = () => {
   const [data, setData] = useState([]);
@@ -53,10 +51,7 @@ const SpaceX = () => {
   return (
     <div className="main">
       <ToTopButton />
-      <Header
-        name={info.name ? info.name : "SpaceX"}
-        summary={info.summary ? info.summary : summary}
-      />
+      <Header name={info.name ? info.name : "SpaceX"} />
       <Search onSelectChange={HandleSelectChange} value={select} />
       <div className="launches-list">
         {loading ? (
