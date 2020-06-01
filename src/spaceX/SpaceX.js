@@ -18,6 +18,7 @@ const SpaceX = () => {
   const [data, setData] = useState([]);
   const [info, setInfo] = useState({});
   const [select, setSelect] = useState("");
+  const [year, setYear] = useState("none");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -48,14 +49,36 @@ const SpaceX = () => {
     setSelect(e.target.value);
   };
 
+  const HandleYearSelectChange = (e) => {
+    setYear(e.target.value);
+  };
+
   return (
     <div className="main">
       <ToTopButton />
       <Header name={info.name ? info.name : "SpaceX"} />
-      <Search onSelectChange={HandleSelectChange} value={select} />
+      <Search
+        onSelectChange={HandleSelectChange}
+        onYearChange={HandleYearSelectChange}
+        value={select}
+        yearValue={year}
+        launches={data}
+      />
       <div className="launches-list">
         {loading ? (
           <Spinner />
+        ) : year !== "none" ? (
+          data
+            .filter((launch) => year === launch.launch_year)
+            .map((launch) => (
+              <Launch
+                key={launch.flight_number}
+                name={launch.mission_name}
+                year={launch.launch_year}
+                image={launch.links.mission_patch_small}
+                link={launch.links.article_link}
+              />
+            ))
         ) : (
           data.map((launch) => (
             <Launch

@@ -61,6 +61,7 @@ label {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 160px;
 }
 
 .launch-div {
@@ -71,14 +72,6 @@ label {
   padding: 10px;
   margin: 10px;
   box-shadow: 2px 2px 3px cornflowerblue;
-}
-
-.launch-div a img {
-  filter: grayscale(1);
-  transition: filter 0.1s ease-in;
-}
-.launch-div a img:hover {
-  filter: grayscale(0);
 }
 
 .launch-div h3 {
@@ -189,8 +182,8 @@ label {
 }
 
 .img-container p {
-  font-size: 25px;
-  padding: 75px 20px 0 20px;
+  font-size: 20px;
+  padding: 100px 20px 0 20px;
 }
 
 .inputs-div select {
