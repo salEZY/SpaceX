@@ -222,6 +222,11 @@ label {
   z-index: 100;
   pointer-events: none;
 }
+
+.second:before {
+  color: #b5bddf;
+}
+
 .inputs-div:hover:before {
   background: #e4f4ff;
 }

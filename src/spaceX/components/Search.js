@@ -29,7 +29,7 @@ const Search = ({
         </div>
         <label>Select launches by year</label>
         <div className="pastFuture-container">
-          <div className="inputs-div">
+          <div className="inputs-div second">
             <select name="" onChange={onYearChange} defaultValue={yearValue}>
               <option value="none">All Years</option>
               {years.map((year) => (
