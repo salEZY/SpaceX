@@ -16,6 +16,7 @@ const Search = ({
 
   return (
     <div id="info-container">
+      <Info />
       <div className="inputs">
         <label>Select past or upcoming launches</label>
         <div className="pastFuture-container">
@@ -41,7 +42,6 @@ const Search = ({
           </div>
         </div>
       </div>
-      <Info />
     </div>
   );
 };
