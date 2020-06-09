@@ -1,3 +1,3 @@
 # SpaceX
 
-App created in react to display launches of SpaceX program
+App created in React to display launches of SpaceX program.
